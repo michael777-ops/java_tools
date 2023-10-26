@@ -14,8 +14,8 @@ public class TekaAuth {
 
     public static void main(String[] args) throws IOException, KeyManagementException, NoSuchAlgorithmException {
         // Crea una nuova URL per l'API
-        URL url = new URL("https://api.e-signit.gr/authenticate");
-
+        //URL url = new URL("https://api.e-signit.gr/authenticate");
+        URL url = new URL(null, "https://api.e-signit.gr/authenticatel", new sun.net.www.protocol.https.Handler());
         // Crea una nuova connessione HTTP
         HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
